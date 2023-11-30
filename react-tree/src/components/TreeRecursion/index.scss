@@ -1,0 +1,87 @@
+.tree-wrapper {
+    position: relative;
+
+    .item {
+      cursor: pointer;
+
+      .depth-1 {
+        border: 1px solid rgba(0, 0, 255, 0.5);
+        margin-left: 0;
+        width: 100%;
+        height: 30px;
+        background: rgb(100, 216, 255);
+      }
+
+      .depth-2 {
+        border: 1px solid rgba(0, 0, 255, 0.5);
+        margin-left: 50px;
+        width: calc(100% - 50px);
+        height: 30px;
+        background: rgb(100, 190, 255);
+      }
+
+      .depth-3 {
+        border: 1px solid rgba(0, 0, 255, 0.5);
+        margin-left: 100px;
+        width: calc(100% - 100px);
+        height: 30px;
+        background: rgb(100, 170, 255);
+      }
+
+      .depth-4 {
+        border: 1px solid rgba(0, 0, 255, 0.5);
+        margin-left: 150px;
+        width: calc(100% - 150px);
+        height: 30px;
+        background: rgb(100, 150, 255);
+      }
+
+      .inactive {
+        opacity: 0.5;
+        cursor: default;
+      }
+    }
+
+    .item:active {
+      cursor: grabbing;
+    }
+
+    .item-children {
+      height: auto;
+      transition: max-height 0.2s, opacity 0.2s;
+    }
+
+    .active {
+      opacity: 0.3;
+    }
+}
+
+.position {
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    z-index: 10;
+  
+    &.first {
+      top: -5px;
+    }
+  
+    &.active {
+      background-color: rgba(94, 202, 202, 0.8);
+      opacity: 1;
+    }
+  
+    &.depth-2 {
+      margin-left: 48px;
+    }
+  
+    &.depth-3 {
+      margin-left: 97px;
+    }
+  
+    &.depth-4 {
+      margin-left: 145px;
+    }
+}

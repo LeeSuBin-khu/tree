@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #EDF1F5;
+
+  .contents-container {
+    display: flex;
+    gap: 10px;
+    width: 1700px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  .title {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.tree-container {
+  padding: 30px;
+  width: 50%;
+  height: 100%;
+  background: white;
+  border: 2px solid rgba(38, 40, 41, 0.617);
+  border-radius: 30px;
+}
